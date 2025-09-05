@@ -1,16 +1,15 @@
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './Components/auth/Login';
 import Register from './Components/auth/Register';
 import ForgetPassword from './Components/auth/ForgetPassword';
 import ResetPassword from './Components/auth/ResetPassword';
+import Home from './Components/Home/Home';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<Routes>
+			<Route path="/" element={<Home />} />
 			<Route path="/login" element={<Login />} />
 			<Route path="/register" element={<Register />} />
 			<Route path="/forgot-password" element={<ForgetPassword />} />

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ResetPassword = () => {
 	return (
-		<div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+		<div className="min-h-screen bg-[#F9FAFB] flex items-center justify-center px-4">
 			<div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
 				<form className="space-y-4 max-w-md mx-auto mt-8">
 					<h2 className="text-2xl font-bold mb-4 text-center">
