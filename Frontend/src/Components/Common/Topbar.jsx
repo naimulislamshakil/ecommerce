@@ -115,23 +115,23 @@ const Topbar = () => {
 											</Link>
 
 											<hr class="border-t border-gray-300"></hr>
-											<a
-												href="#"
+											<Link
+												to="/"
 												className="flex justify-start gap-3 items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
 												<Heart />
 												My Wishlist
-											</a>
+											</Link>
 											<hr class="border-t border-gray-300"></hr>
-											<a
-												href="#"
+											<Link
+												to="/login"
 												className="flex justify-start gap-3 items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
 												<LogIn />
 												Login
-											</a>
+											</Link>
 										</div>
 									</div>
 								)}
