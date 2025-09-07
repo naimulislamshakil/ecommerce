@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Slider1 from '../../assets/slider.jpg';
-import Slider2 from '../../assets/slider1.jpg';
+import Slider1 from '@/assets/slider.jpg';
+import Slider2 from '@/assets/slider1.jpg';
 
 const Banner = () => {
 	const slides = [
