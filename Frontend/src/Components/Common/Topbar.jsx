@@ -101,7 +101,7 @@ const Topbar = () => {
 								{/* Dropdown menu */}
 								{isOpen && (
 									<div
-										className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white"
+										className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white z-50"
 										role="menu"
 									>
 										<div className="py-1" role="none">
@@ -114,7 +114,7 @@ const Topbar = () => {
 												My Account
 											</Link>
 
-											<hr class="border-t border-gray-300"></hr>
+											<hr className="border-t border-gray-300"></hr>
 											<Link
 												to="/"
 												className="flex justify-start gap-3 items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -123,7 +123,7 @@ const Topbar = () => {
 												<Heart />
 												My Wishlist
 											</Link>
-											<hr class="border-t border-gray-300"></hr>
+											<hr className="border-t border-gray-300"></hr>
 											<Link
 												to="/login"
 												className="flex justify-start gap-3 items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -139,7 +139,7 @@ const Topbar = () => {
 						</div>
 					</div>
 				</div>
-				<hr class="border-t border-gray-300"></hr>
+				<hr className="border-t border-gray-300"></hr>
 			</div>
 
 			{/* Main Menu */}
@@ -161,7 +161,7 @@ const Topbar = () => {
 						))}
 					</ul>
 				</div>
-				<hr class="border-t border-gray-300"></hr>
+				<hr className="border-t border-gray-300"></hr>
 			</div>
 		</div>
 	);
