@@ -7,3 +7,25 @@ body {
 .font-poppins {
 	font-family: 'Poppins', sans-serif;
 }
+
+.airport-img {
+	background-image: url('./assets/Airpods.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}
+.smartwatch-img {
+	background-image: url('./assets/smart Watch.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}
+.laptop-img {
+	background-image: url('./assets/laptop.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}

@@ -113,7 +113,7 @@ const ShopCategories = () => {
 				transitionDuration={500}
 			>
 				{cards.map((cardInfo, i) => (
-					<div key={i} className="mr-4">
+					<div key={i} className="mr-4 px-5 md:px-0">
 						<img
 							className="mb-3 w-full transition-transform duration-500 ease-in-out transform hover:scale-105"
 							src={cardInfo.image}
