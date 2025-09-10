@@ -29,3 +29,17 @@ body {
 	background-repeat: no-repeat; /* Prevent tiling */
 	height: 200px;
 }
+.phone-img {
+	background-image: url('./assets/phone banner.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}
+.headset-img {
+	background-image: url('./assets/Headset.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}

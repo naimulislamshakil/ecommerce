@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Watch from '@/assets/watch.jpg';
 import Speker from '@/assets/speker.jpg';
@@ -66,7 +66,7 @@ const ShopCategories = () => {
 			],
 		},
 		{
-			image: Watch,
+			image: Accessories,
 			name: 'Shop All',
 			path: '/shop-all',
 			subMenus: [
