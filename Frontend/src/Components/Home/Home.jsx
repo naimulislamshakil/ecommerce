@@ -1,9 +1,9 @@
 import React from 'react';
 import Topbar from '../Common/Topbar';
 import Banner from './Banner';
-import TopProduct from './TopProduct';
 import ShopCategories from './ShopCategories';
 import Discount1 from './Discount1';
+import FaturedProduct from './FaturedProduct';
 
 const Home = () => {
 	return (
@@ -12,7 +12,7 @@ const Home = () => {
 			<Banner />
 			<ShopCategories />
 			<Discount1 />
-			<TopProduct />
+			<FaturedProduct />
 		</div>
 	);
 };

@@ -98,7 +98,7 @@ const ShopCategories = () => {
 		},
 	};
 	return (
-		<div className="container mx-auto">
+		<div className="container mx-auto px-5 md:px-0">
 			<div className="py-5">
 				<h2 className="text-2xl font-semibold">Shop Categories</h2>
 			</div>
@@ -113,7 +113,7 @@ const ShopCategories = () => {
 				transitionDuration={500}
 			>
 				{cards.map((cardInfo, i) => (
-					<div key={i} className="mr-4 px-5 md:px-0">
+					<div key={i} className="mr-4">
 						<img
 							className="mb-3 w-full transition-transform duration-500 ease-in-out transform hover:scale-105"
 							src={cardInfo.image}

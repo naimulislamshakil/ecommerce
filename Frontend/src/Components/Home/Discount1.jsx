@@ -2,7 +2,7 @@ import React from 'react';
 
 const Discount1 = () => {
 	return (
-		<div className="container mx-auto py-7">
+		<div className="container mx-auto py-7 px-3 md:px-0">
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 				<div className="airport-img rounded-md flex justify-end items-center p-5">
 					<div>
