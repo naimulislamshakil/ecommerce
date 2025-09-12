@@ -1,5 +1,6 @@
 import React from 'react';
 import Topbar from '../Common/Topbar';
+import Footer from '../Common/Footer';
 
 const ForgetPassword = () => {
 	return (
@@ -35,6 +36,7 @@ const ForgetPassword = () => {
 					</form>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

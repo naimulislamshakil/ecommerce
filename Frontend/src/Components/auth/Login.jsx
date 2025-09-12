@@ -1,6 +1,7 @@
 import React from 'react';
 import { setTitle } from '../../CustomHook/Title';
 import Topbar from '../Common/Topbar';
+import Footer from '../Common/Footer';
 
 const Login = () => {
 	setTitle('Login');
@@ -99,6 +100,7 @@ const Login = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

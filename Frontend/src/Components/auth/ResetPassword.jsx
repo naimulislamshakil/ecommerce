@@ -1,5 +1,6 @@
 import React from 'react';
 import Topbar from '../Common/Topbar';
+import Footer from '../Common/Footer';
 
 const ResetPassword = () => {
 	return (
@@ -51,6 +52,7 @@ const ResetPassword = () => {
 					</form>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

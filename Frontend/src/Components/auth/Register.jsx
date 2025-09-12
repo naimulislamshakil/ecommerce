@@ -1,6 +1,7 @@
 import React from 'react';
 import { setTitle } from '../../CustomHook/Title';
 import Topbar from '../Common/Topbar';
+import Footer from '../Common/Footer';
 
 const Register = () => {
 	setTitle('Student Register');
@@ -115,6 +116,7 @@ const Register = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

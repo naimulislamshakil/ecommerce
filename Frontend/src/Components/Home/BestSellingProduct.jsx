@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const FaturedProduct = () => {
+const BestSellingProduct = () => {
 	const products = [
 		{
 			id: 1,
@@ -88,7 +88,7 @@ const FaturedProduct = () => {
 	return (
 		<div className="container mx-auto pb-5 px-3 md:px-0">
 			<div className="pt-2 pb-5">
-				<h2 className="text-2xl font-semibold">Fatured Product</h2>
+				<h2 className="text-2xl font-semibold">Best Selling Product</h2>
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -100,4 +100,4 @@ const FaturedProduct = () => {
 	);
 };
 
-export default FaturedProduct;
+export default BestSellingProduct;
