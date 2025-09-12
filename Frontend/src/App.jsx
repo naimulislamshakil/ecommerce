@@ -5,6 +5,7 @@ import Register from './Components/auth/Register';
 import ForgetPassword from './Components/auth/ForgetPassword';
 import ResetPassword from './Components/auth/ResetPassword';
 import Home from './Components/Home/Home';
+import SingleProduct from './Components/Home/SingleProduct';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/register" element={<Register />} />
 			<Route path="/forgot-password" element={<ForgetPassword />} />
 			<Route path="/reset-password" element={<ResetPassword />} />
+			<Route path="/product" element={<SingleProduct />} />
 		</Routes>
 	);
 }

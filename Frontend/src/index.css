@@ -8,6 +8,10 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .airport-img {
 	background-image: url('./assets/Airpods.jpg');
 	background-size: cover; /* Make image cover the element */
@@ -38,6 +42,20 @@ body {
 }
 .headset-img {
 	background-image: url('./assets/Headset.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}
+.football-img {
+	background-image: url('./assets/football.jpg');
+	background-size: cover; /* Make image cover the element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent tiling */
+	height: 200px;
+}
+.tv-img {
+	background-image: url('./assets/tv.jpg');
 	background-size: cover; /* Make image cover the element */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Prevent tiling */
