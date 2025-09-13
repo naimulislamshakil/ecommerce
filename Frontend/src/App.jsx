@@ -6,6 +6,7 @@ import ForgetPassword from './Components/auth/ForgetPassword';
 import ResetPassword from './Components/auth/ResetPassword';
 import Home from './Components/Home/Home';
 import SingleProduct from './Components/Home/SingleProduct';
+import CartPage from './Components/Home/CartPage';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<Route path="/forgot-password" element={<ForgetPassword />} />
 			<Route path="/reset-password" element={<ResetPassword />} />
 			<Route path="/product" element={<SingleProduct />} />
+			<Route path="/cart" element={<CartPage />} />
 		</Routes>
 	);
 }

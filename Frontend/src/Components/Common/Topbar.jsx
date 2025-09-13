@@ -6,9 +6,10 @@ import {
 	CircleUserRound,
 	LogIn,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Topbar = () => {
+	const navigate = useNavigate();
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleDropdown = () => {
@@ -83,7 +84,10 @@ const Topbar = () => {
 								</span>
 							</div>
 
-							<div className="relative inline-block">
+							<div
+								className="relative inline-block"
+								onClick={() => navigate('/cart')}
+							>
 								<ShoppingCart className="w-6 h-6 text-gray-700" />
 								<span className="absolute -top-2 -right-2 bg-[#F87171] text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
 									3
