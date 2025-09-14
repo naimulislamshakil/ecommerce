@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Topbar from '../Common/Topbar';
 import Footer from '../Common/Footer';
 import { ShoppingCart, Trash2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
+	const navigate = useNavigate();
 	const initialCartItems = [
 		{
 			id: 1,
@@ -269,7 +271,10 @@ const CartPage = () => {
 									</div>
 								</div>
 
-								<button className="w-full mt-6 bg-indigo-600 text-white font-semibold py-3 rounded-md shadow-lg hover:bg-indigo-700 transition-colors">
+								<button
+									onClick={() => navigate('/ckeckout')}
+									className="w-full mt-6 bg-indigo-600 text-white font-semibold py-3 rounded-md shadow-lg hover:bg-indigo-700 transition-colors"
+								>
 									Checkout
 								</button>
 							</div>

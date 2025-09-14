@@ -7,6 +7,7 @@ import ResetPassword from './Components/auth/ResetPassword';
 import Home from './Components/Home/Home';
 import SingleProduct from './Components/Home/SingleProduct';
 import CartPage from './Components/Home/CartPage';
+import CheckOut from './Components/Home/CheckOut';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 			<Route path="/reset-password" element={<ResetPassword />} />
 			<Route path="/product" element={<SingleProduct />} />
 			<Route path="/cart" element={<CartPage />} />
+			<Route path="/ckeckout" element={<CheckOut />} />
 		</Routes>
 	);
 }
