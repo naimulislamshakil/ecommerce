@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import SingleProduct from './Components/Home/SingleProduct';
 import CartPage from './Components/Home/CartPage';
 import CheckOut from './Components/Home/CheckOut';
+import Thankyou from './Components/Home/Thankyou';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 			<Route path="/product" element={<SingleProduct />} />
 			<Route path="/cart" element={<CartPage />} />
 			<Route path="/ckeckout" element={<CheckOut />} />
+			<Route path="/payment-complete" element={<Thankyou />} />
 		</Routes>
 	);
 }

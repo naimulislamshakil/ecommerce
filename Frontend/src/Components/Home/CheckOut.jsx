@@ -1,8 +1,11 @@
 import React from 'react';
 import Topbar from '../Common/Topbar';
 import Footer from '../Common/Footer';
+import { useNavigate } from 'react-router-dom';
 
-const CheckOut = () => {
+const CheckOut = () =>
+{
+    const navigate=useNavigate()
 	return (
 		<div>
 			<Topbar />
@@ -174,7 +177,10 @@ const CheckOut = () => {
 								</button>
 							</div>
 
-							<button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">
+							<button
+								onClick={() => navigate('/payment-complete')}
+								className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
+							>
 								Place Order
 							</button>
 						</div>
