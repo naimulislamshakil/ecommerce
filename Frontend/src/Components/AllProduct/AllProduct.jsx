@@ -138,7 +138,7 @@ const AllProduct = () => {
 					</div>
 
 					{/* Filters */}
-					{['category', 'color', 'size'].map((type) => (
+					{['category', 'color', 'size', 'Brands'].map((type) => (
 						<select
 							key={type}
 							value={filters[type]}
@@ -162,6 +162,33 @@ const AllProduct = () => {
 								['Select Size', 'S', 'M', 'L', 'XL'].map((c) => (
 									<option key={c}>{c}</option>
 								))}
+							{type === 'Brands' &&
+								[
+									'Select Brands',
+									'Apple',
+									'Samsung',
+									'Google',
+									'Xiaomi',
+									'OnePlus',
+									'Oppo',
+									'Vivo',
+									'Motorola',
+									'Nokia',
+									'Realme',
+									'Huawei',
+									'Sony',
+									'Tesla',
+									'BYD',
+									'Volkswagen',
+									'General Motors',
+									'Hyundai',
+									'Kia',
+									'Ford',
+									'Rivian',
+									'Lucid Motors',
+									'Polestar',
+									'NIO',
+								].map((c) => <option key={c}>{c}</option>)}
 						</select>
 					))}
 

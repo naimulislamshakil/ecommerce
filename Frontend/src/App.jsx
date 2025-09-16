@@ -10,6 +10,11 @@ import CartPage from './Components/Home/CartPage';
 import CheckOut from './Components/Home/CheckOut';
 import Thankyou from './Components/Home/Thankyou';
 import AllProduct from './Components/AllProduct/AllProduct';
+import Dashboard from './Components/Dashboard/Dashboard';
+import DashboardHome from './Components/Dashboard/DashboardHome';
+import Order from './Components/Dashboard/Order';
+import SingleOrder from './Components/Dashboard/SingleOrder';
+import Profile from './Components/Dashboard/Profile';
 
 function App() {
 	return (
@@ -24,6 +29,12 @@ function App() {
 			<Route path="/ckeckout" element={<CheckOut />} />
 			<Route path="/payment-complete" element={<Thankyou />} />
 			<Route path="/shop-all" element={<AllProduct />} />
+			<Route path="/dashboard" element={<Dashboard />}>
+				<Route index element={<DashboardHome />} />
+				<Route path="orders" element={<Order />} />
+				<Route path="order/:id" element={<SingleOrder />} />
+				<Route path="profile" element={<Profile />} />
+			</Route>
 		</Routes>
 	);
 }
