@@ -9,6 +9,7 @@ import SingleProduct from './Components/Home/SingleProduct';
 import CartPage from './Components/Home/CartPage';
 import CheckOut from './Components/Home/CheckOut';
 import Thankyou from './Components/Home/Thankyou';
+import AllProduct from './Components/AllProduct/AllProduct';
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 			<Route path="/cart" element={<CartPage />} />
 			<Route path="/ckeckout" element={<CheckOut />} />
 			<Route path="/payment-complete" element={<Thankyou />} />
+			<Route path="/shop-all" element={<AllProduct />} />
 		</Routes>
 	);
 }

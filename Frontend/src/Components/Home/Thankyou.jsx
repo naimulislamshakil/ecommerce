@@ -13,7 +13,7 @@ const Thankyou = () => {
 		<div>
 			<Topbar />
 			<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
-				<div className="bg-white shadow-xl rounded-2xl p-10 max-w-lg w-full text-center animate-fadeIn">
+				<div className="bg-white shadow-xl rounded-md p-10 max-w-lg w-full text-center animate-fadeIn">
 					<CheckCircle className="mx-auto text-green-500 w-20 h-20 mb-6" />
 					<h1 className="text-4xl font-bold text-gray-800 mb-2">
 						Payment Successful!
