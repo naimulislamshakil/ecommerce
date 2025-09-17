@@ -8,6 +8,7 @@ import {
 	Gift,
 	User,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const DashboardHome = () => {
 	return (
@@ -76,9 +77,12 @@ const DashboardHome = () => {
 							<span className="text-sm text-blue-600">Shipped</span>
 						</li>
 					</ul>
-					<button className="mt-4 text-blue-600 text-sm font-medium hover:underline">
+					<Link
+						to="/dashboard/orders"
+						className="mt-4 text-blue-600 text-sm font-medium hover:underline"
+					>
 						View All Orders →
-					</button>
+					</Link>
 				</div>
 
 				{/* Wishlist */}
