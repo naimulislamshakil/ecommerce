@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import {
 	Home,
 	Box,
-	Folder,
-	Settings,
-	Bell,
-	User,
-	Menu,
+	ShoppingBasket,
 	ChevronDown,
-	NotepadText,
-	ChartLine,
-	BookOpenCheck,
-	Landmark,
-	LibraryBig,
+	Headset,
+	LogOut,
+	ArchiveRestore,
+	UserRoundPen,
 } from 'lucide-react';
 import Topbar from '../Common/Topbar';
 import Footer from '../Common/Footer';
 
 const Dashboard = () => {
+	const location = useLocation();
 	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [activeTab, setActiveTab] = useState('Home');
-	const [dropdownOpen, setDropdownOpen] = useState(false); // topbar dropdown
+
 	const [submenuOpen, setSubmenuOpen] = useState(false); // sidebar dropdown
 
-	const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 	const toggleSubmenu = () => setSubmenuOpen(!submenuOpen);
 
 	const menuItems = [
@@ -36,29 +29,24 @@ const Dashboard = () => {
 			path: '/dashboard/orders',
 		},
 		{
-			icon: <NotepadText className="w-5 h-5" />,
-			label: 'Class Schedule',
-			path: '/class-schedule',
+			icon: <UserRoundPen className="w-5 h-5" />,
+			label: 'Profile',
+			path: '/dashboard/profile',
 		},
 		{
-			icon: <ChartLine className="w-5 h-5" />,
-			label: 'Grades & Report Cards',
-			path: '/report-cards',
+			icon: <Headset className="w-5 h-5" />,
+			label: 'Support Tickets',
+			path: '/dashboard/support-tickets',
 		},
 		{
-			icon: <BookOpenCheck className="w-5 h-5" />,
-			label: 'Homework & Assignments',
-			path: '/homework-assignments',
+			icon: <ShoppingBasket className="w-5 h-5" />,
+			label: 'Product Management',
+			path: '/dashboard/admin/product-management',
 		},
 		{
-			icon: <Landmark className="w-5 h-5" />,
-			label: 'Fee Status',
-			path: '/fee-status',
-		},
-		{
-			icon: <LibraryBig className="w-5 h-5" />,
-			label: 'Library Access',
-			path: '/library-access',
+			icon: <ArchiveRestore className="w-5 h-5" />,
+			label: 'Order Management',
+			path: '/dashboard/admin/order-management',
 		},
 	];
 	return (
@@ -71,27 +59,16 @@ const Dashboard = () => {
 						sidebarOpen ? 'w-64' : 'w-20'
 					} bg-white shadow-lg flex flex-col transition-all duration-300`}
 				>
-					<div
-						className={
-							sidebarOpen
-								? 'flex items-center justify-end p-4'
-								: 'flex items-center justify-center p-4'
-						}
-					>
-						<Menu className="w-6 h-6 cursor-pointer" onClick={toggleSidebar} />
-					</div>
-
-					<nav className="flex-1 p-2 space-y-1">
+					<nav className="flex-1 p-2 space-y-1 pt-10">
 						{menuItems.map((item) => (
 							<div key={item.label}>
 								<Link
 									to={item.path}
 									onClick={() => {
-										setActiveTab(item.label);
 										if (item.hasSubmenu) toggleSubmenu();
 									}}
 									className={`flex items-center justify-between gap-3 w-full p-2 rounded-lg transition-colors ${
-										activeTab === item.label
+										location.pathname === item.path
 											? 'bg-blue-500 text-white'
 											: 'text-gray-700 hover:bg-blue-100 hover:text-blue-700'
 									}`}
@@ -124,9 +101,11 @@ const Dashboard = () => {
 								)}
 							</div>
 						))}
+						<button className="flex items-center justify-start gap-3 w-full p-2 rounded-lg transition-colors text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+							<LogOut className="w-5 h-5" />
+							Logout
+						</button>
 					</nav>
-
-					<div className="p-4">{sidebarOpen && 'Logout'}</div>
 				</aside>
 
 				{/* Main Content */}

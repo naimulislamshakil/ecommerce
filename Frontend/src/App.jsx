@@ -15,6 +15,9 @@ import DashboardHome from './Components/Dashboard/DashboardHome';
 import Order from './Components/Dashboard/Order';
 import SingleOrder from './Components/Dashboard/SingleOrder';
 import Profile from './Components/Dashboard/Profile';
+import SupportTrack from './Components/Dashboard/SupportTrack';
+import ProductManagement from './Components/Dashboard/ProductManagement';
+import OrderManagement from './Components/Dashboard/OrderManagement';
 
 function App() {
 	return (
@@ -34,6 +37,13 @@ function App() {
 				<Route path="orders" element={<Order />} />
 				<Route path="order/:id" element={<SingleOrder />} />
 				<Route path="profile" element={<Profile />} />
+				<Route path="support-tickets" element={<SupportTrack />} />
+				{/* Admin Dashboard */}
+				<Route
+					path="admin/product-management"
+					element={<ProductManagement />}
+				/>
+				<Route path="admin/order-management" element={<OrderManagement />} />
 			</Route>
 		</Routes>
 	);
