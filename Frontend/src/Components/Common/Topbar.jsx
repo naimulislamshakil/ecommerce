@@ -5,6 +5,7 @@ import {
 	ShoppingCart,
 	CircleUserRound,
 	LogIn,
+	LayoutDashboard,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -135,6 +136,15 @@ const Topbar = () => {
 											>
 												<LogIn />
 												Login
+											</Link>
+											<hr className="border-t border-gray-300"></hr>
+											<Link
+												to="/dashboard"
+												className="flex justify-start gap-3 items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												<LayoutDashboard />
+												Dashboard
 											</Link>
 										</div>
 									</div>

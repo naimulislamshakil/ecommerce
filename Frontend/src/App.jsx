@@ -18,6 +18,8 @@ import Profile from './Components/Dashboard/Profile';
 import SupportTrack from './Components/Dashboard/SupportTrack';
 import ProductManagement from './Components/Dashboard/ProductManagement';
 import OrderManagement from './Components/Dashboard/OrderManagement';
+import CustomerProfile from './Components/Dashboard/CustomerProfile';
+import AdminProfile from './Components/Dashboard/AdminProfile';
 
 function App() {
 	return (
@@ -36,9 +38,12 @@ function App() {
 				<Route index element={<DashboardHome />} />
 				<Route path="orders" element={<Order />} />
 				<Route path="order/:id" element={<SingleOrder />} />
-				<Route path="profile" element={<Profile />} />
 				<Route path="support-tickets" element={<SupportTrack />} />
+
+				<Route path="profile" element={<CustomerProfile />} />
+
 				{/* Admin Dashboard */}
+				<Route path="admin/profile" element={<AdminProfile />} />
 				<Route
 					path="admin/product-management"
 					element={<ProductManagement />}

@@ -21,6 +21,12 @@ const Dashboard = () => {
 
 	const toggleSubmenu = () => setSubmenuOpen(!submenuOpen);
 
+	const user = {
+		name: 'Naimul',
+		role: 'user',
+		// role: 'admin',
+	};
+
 	const menuItems = [
 		{ icon: <Home className="w-5 h-5" />, label: 'Home', path: '/dashboard' },
 		{
@@ -31,7 +37,9 @@ const Dashboard = () => {
 		{
 			icon: <UserRoundPen className="w-5 h-5" />,
 			label: 'Profile',
-			path: '/dashboard/profile',
+			path: `${
+				user.role === 'user' ? '/dashboard/profile' : '/dashboard/admin/profile'
+			}`,
 		},
 		{
 			icon: <Headset className="w-5 h-5" />,
