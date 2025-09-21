@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const userRoute = require('./Route/user.route');
 
 // Middleware
 app.use(bodyParser.json());
@@ -16,7 +17,7 @@ app.use(cookieParser());
 
 // Database
 mongoose
-	.connect('mongodb://0.0.0.0:27017/mydb', {})
+	.connect('mongodb://0.0.0.0:27017/', {})
 	.then(() => console.log('Database connected successfully.'))
 	.catch((err) => console.log(err));
 
@@ -24,6 +25,8 @@ mongoose
 app.get('/', (req, res) => {
 	res.send('<h1>How are you?</h1>');
 });
+
+app.use('/api/v1', userRoute);
 
 // Start server
 app.listen(PORT, () => {
