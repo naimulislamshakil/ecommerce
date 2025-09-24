@@ -20,11 +20,15 @@ class UserControllers {
 				req.body
 			);
 
+			res.cookie('accessToken', accessToken, {
+				httpOnly: true,
+				secure: false, // true in production with HTTPS
+				sameSite: 'strict',
+			});
 			res.cookie('refreshToken', refreshToken, {
 				httpOnly: true,
-				// secure: process.env.NODE_ENV === 'production', // only https in prod
+				secure: false,
 				sameSite: 'strict',
-				maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
 			});
 
 			res.json({ message: 'Login successful', user, accessToken });
