@@ -11,6 +11,6 @@ const userControllers = new UserControllers(userService);
 route.post('/user/register', userControllers.register);
 route.post('/user/login', userControllers.login);
 route.get('/user/refreshToken', userControllers.refreshToken);
-route.get('/user/logout', userMiddleware, userControllers.logout);
+route.get('/user/logout', userControllers.logout);
 
 module.exports = route;

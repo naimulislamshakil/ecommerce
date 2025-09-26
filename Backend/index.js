@@ -17,7 +17,10 @@ app.use(cookieParser());
 
 // Database
 mongoose
-	.connect('mongodb://0.0.0.0:27017/', {})
+	.connect(
+		`mongodb+srv://ecommerce:${process.env.DB_PASS}@ecommerce.q62rig0.mongodb.net/?retryWrites=true&w=majority&appName=ecommerce`,
+		{}
+	)
 	.then(() => console.log('Database connected successfully.'))
 	.catch((err) => console.log(err));
 
